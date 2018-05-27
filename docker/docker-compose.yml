@@ -1,0 +1,12 @@
+version: '2'
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    working_dir: /var/www
+    ports:
+      - "9876:9876"
+      - "5022:22"
+    privileged: true
+    volumes:
+      - ../:/var/www
